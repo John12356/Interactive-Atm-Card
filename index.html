@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="perusu">
+    <img class="colorbg" src="images/bg-main-desktop.png">
+    <div class="front">
+      <img class="frimg" src="images/bg-card-front.png">
+      <img id="ballimg" src="images/card-logo.svg">
+      <p id="cardnum">0000 0000 0000 0000</p>
+      <p id="cardname">XXXX XXXX</p>
+      <p id="cardexp"><span id="m">00</span>/<span id="y">00</span></p>
+    </div>
+    <div class="back">
+      <img src="images/bg-card-back.png" class="bacimg">
+      <p id="cvv">000</p>
+    </div>
+    <div id="all" class="sillu">
+      <div id="rot1" class="right">
+        <label for="name" class="labels">CARDHOLDER NAME</label>
+        <input id="name" class="inputs" type="text" placeholder="e.g.JOHN"><br>
+        <label for="number" class="labels">CARD NUMBER</label><br>
+        <input id="num" class="inputs" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" placeholder="e.g.1234 5678 9101 1121" maxlength="19"><br>
+        <p id="err1"></p>
+
+        <label for="exp" class="labels">EXP.DATE (MM/YY)</label>
+        <label for="cvv" id="cvvv" class="labels">CVV</label><br>
+        <p id="err2" ></p>
+        <p id="err3" ></p>
+        <input id="mon" class="date" type="number"  placeholder="MM" maxlength="2" minlength="2">
+        <input id="year" class="date" type="number"  placeholder="YY" maxlength="2" minlength="2">
+        
+        <input id="cvc" class="cvv" type="number" placeholder="e.g.123" maxlength="3" minlength="3">
+        <button onclick="confirm()" id="confirm">Confirm</button>
+      </div>
+      <div id="rot2" class="rotate">
+        <img id="tick" src="images/icon-complete.svg"><br>
+        <h3 id="tk">THANK YOU!</h3><br>
+        <p id="info">We've added your card details</p><br>
+        <button onclick="abort()" id="con">Continue</button>
+      </div>
+    </div>
+    
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
